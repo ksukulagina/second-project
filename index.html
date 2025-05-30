@@ -7,41 +7,45 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<!-- Главный контейнер для всего содержимого страницы -->
   <div class="container">
-    <!-- Верхняя часть: Картинка + Инфо -->
+     <!-- Верхняя часть: картинка и инфа -->
     <div class="main-content">
+      <!-- Картинка -->
       <div class="image-section">
         <img src="https://cdn.food.ru/unsigned/fit/1080/810/ce/0/czM6Ly9tZWRpYS9waWN0dXJlcy9yZWNpcGVzLzI1NjQ2L2NvdmVycy8zWk1jaVkuanBn.webp" alt="Крем-суп">
       </div>
 
+      <!-- Инфа о блюде -->
       <div class="info-section">
-        <div class="info-wrapper">
-        <h1>Крем-суп из шампиньонов</h1>
-        <p class="description">
+        <div class="info-wrapper"> <!-- Нужен для того, чтобы инфа о блюде симпатично расстянулась по высоте картинки -->
+          <h1>Крем-суп из шампиньонов</h1>
+          <p class="description">
           Нежный крем-суп из шампиньонов — это изысканное блюдо, которое сочетает в себе бархатистую текстуру,
           насыщенный вкус грибов и лёгкий аромат лесных орехов.
-        </p>
+          </p>
 
-        <div class="nutrition">
+         <div class="nutrition">
           <div><span>Углеводы</span><strong>67</strong></div>
           <div><span>Жиры</span><strong>25</strong></div>
           <div><span>Белки</span><strong>11</strong></div>
           <div><span>Калории</span><strong>873</strong></div>
-        </div>
+         </div>
 
-        <div class="price-order">
+         <!-- Цена и кнопулечка -->
+         <div class="price-order">
           <div class="price">500₽</div>
           <button>В заказ</button>
-        </div>
-      </div>
-    </div>
-  </div>
+          </div>
+        </div> <!-- Конец info-wrapper -->
+      </div> <!-- Конец info-section -->
+  </div> <!-- Конец main-content -->
 
     <!-- Рекомендации -->
     <div class="recommend-section">
       <h2>К этому блюду отлично подходят:</h2>
 
+       <!-- Сетка с карточками блюд -->
       <div class="dish-grid">
         <div class="dish-card">
           <img src="https://mirposudy.ru/media/uploads/hlebnaya_korzinka_-_kopiya.jpg" alt="Хлебная корзинка">
@@ -63,9 +67,9 @@
           <img src="https://www.chefmarket.ru/blog/wp-content/uploads/2019/09/stewed-chicken-vegetables-e1568477805734.jpg" alt="Жаркое из свинины">
           <div><span>Жаркое из свинины</span><b>200₽</b></div>
         </div>
-      </div>
-    </div>
-  </div>
+      </div> <!-- Конец dish-grid -->
+    </div> <!-- Конец recommend-section -->
+  </div>  <!-- Конец контейнера -->
 
 </body>
 </html>
