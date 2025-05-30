@@ -4,74 +4,66 @@
   <meta charset="UTF-8">
   <title>Крем-суп из шампиньонов</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css"> <!-- Подключаем CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- ВЕРХНИЙ БЛОК -->
+
   <div class="container">
-    <div class="left">
-      <img src="https://cdn.lifehacker.ru/wp-content/uploads/2021/03/7_1616417613-e1616417711541-1280x640.jpg" alt="Крем-суп" class="soup-img">
-    </div>
-    <div class="right">
-      <h1>Крем-суп из шампиньонов</h1>
-      <p class="description">
-        Нежный крем-суп из шампиньонов — это изысканное блюдо, которое сочетает в себе бархатистую текстуру,
-        насыщенный вкус грибов и лёгкий аромат лесных орехов. Этот суп станет прекрасным дополнением к вашему
-        обеденному столу и подарит незабываемые вкусовые ощущения.
-      </p>
-      <div class="nutrition">
-        <div><span>Углеводы</span><strong>67</strong></div>
-        <div><span>Жиры</span><strong>25</strong></div>
-        <div><span>Белки</span><strong>11</strong></div>
-        <div><span>Калории</span><strong>873</strong></div>
+    <!-- Верхняя часть: Картинка + Инфо -->
+    <div class="main-content">
+      <div class="image-section">
+        <img src="https://cdn.lifehacker.ru/wp-content/uploads/2021/03/7_1616417613-e1616417711541-1280x640.jpg" alt="Крем-суп">
       </div>
-      <div class="price-block">
-        <span class="price">500₽</span>
-        <button class="order-button">В заказ</button>
+
+      <div class="info-section">
+        <h1>Крем-суп из шампиньонов</h1>
+        <p class="description">
+          Нежный крем-суп из шампиньонов — это изысканное блюдо, которое сочетает в себе бархатистую текстуру,
+          насыщенный вкус грибов и лёгкий аромат лесных орехов.
+        </p>
+
+        <div class="nutrition">
+          <div><span>Углеводы</span><strong>67</strong></div>
+          <div><span>Жиры</span><strong>25</strong></div>
+          <div><span>Белки</span><strong>11</strong></div>
+          <div><span>Калории</span><strong>873</strong></div>
+        </div>
+
+        <div class="price-order">
+          <div class="price">500₽</div>
+          <button>В заказ</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Рекомендации -->
+    <div class="recommend-section">
+      <h2>К этому блюду отлично подходят:</h2>
+
+      <div class="dish-grid">
+        <div class="dish-card">
+          <img src="https://mirposudy.ru/media/uploads/hlebnaya_korzinka_-_kopiya.jpg" alt="Хлебная корзинка">
+          <div><span>Хлебная корзинка</span><b>300₽</b></div>
+        </div>
+        <div class="dish-card">
+          <img src="https://cdn-s-static.catery.ru/storage/menu/item/4/5/0/6/450620/preview_preview_image-lKd4DVHKQFWQh9LXCri96hjrqMg46TrfkQ.jpg" alt="Канапе с салом">
+          <div><span>Канапе с салом</span><b>450₽</b></div>
+        </div>
+        <div class="dish-card">
+          <img src="https://lafoy.ru/photo_l/foto-1653-0.jpg" alt="Летний салат">
+          <div><span>Летний салат</span><b>300₽</b></div>
+        </div>
+        <div class="dish-card">
+          <img src="https://images.gastronom.ru/JiVH-HAh4bxrXBdEl8bR5wrtcAvaftvBMb7ttDd7scM/pr:recipe-preview-image/g:ce/rs:auto:0:0:0/L2Ntcy9hbGwtaW1hZ2VzLzA5NzBmOTNmLTFiNzctNDYwNC1iNzUzLWMxNzY0NDZhNjdlNy5qcGc" alt="Гречка по-купечески">
+          <div><span>Гречка по-купечески</span><b>550₽</b></div>
+        </div>
+        <div class="dish-card">
+          <img src="https://www.chefmarket.ru/blog/wp-content/uploads/2019/09/stewed-chicken-vegetables-e1568477805734.jpg" alt="Жаркое из свинины">
+          <div><span>Жаркое из свинины</span><b>200₽</b></div>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- НИЖНИЙ БЛОК -->
-  <div class="recommended-dishes">
-    <h2>К этому блюду отлично подходят:</h2>
-    <div class="dish-cards">
-      <div class="dish-card">
-        <img src="https://mirposudy.ru/media/uploads/hlebnaya_korzinka_-_kopiya.jpg" alt="Хлебная корзинка">
-        <div class="dish-info">
-          <h3>Хлебная корзинка</h3>
-          <span class="price">300₽</span>
-        </div>
-      </div>
-      <div class="dish-card">
-        <img src="https://cdn-s-static.catery.ru/storage/menu/item/4/5/0/6/450620/preview_preview_image-lKd4DVHKQFWQh9LXCri96hjrqMg46TrfkQ.jpg" alt="Канапе с салом">
-        <div class="dish-info">
-          <h3>Канапе с салом</h3>
-          <span class="price">450₽</span>
-        </div>
-      </div>
-      <div class="dish-card">
-        <img src="https://lafoy.ru/photo_l/foto-1653-0.jpg" alt="Летний салат">
-        <div class="dish-info">
-          <h3>Летний салат</h3>
-          <span class="price">300₽</span>
-        </div>
-      </div>
-      <div class="dish-card">
-        <img src="https://images.gastronom.ru/JiVH-HAh4bxrXBdEl8bR5wrtcAvaftvBMb7ttDd7scM/pr:recipe-preview-image/g:ce/rs:auto:0:0:0/L2Ntcy9hbGwtaW1hZ2VzLzA5NzBmOTNmLTFiNzctNDYwNC1iNzUzLWMxNzY0NDZhNjdlNy5qcGc" alt="Гречка по-купечески">
-        <div class="dish-info">
-          <h3>Гречка по-купечески</h3>
-          <span class="price">550₽</span>
-        </div>
-      </div>
-      <div class="dish-card">
-        <img src="https://www.chefmarket.ru/blog/wp-content/uploads/2019/09/stewed-chicken-vegetables-e1568477805734.jpg" alt="Жаркое из свинины">
-        <div class="dish-info">
-          <h3>Жаркое из свинины</h3>
-          <span class="price">200₽</span>
-        </div>
-      </div>
-    </div>
-  </div>
 </body>
 </html>
