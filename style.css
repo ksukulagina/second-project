@@ -160,7 +160,3 @@ button:hover {
   overflow-wrap: break-word; /* переносим слово, если оно слишком длинное */
   max-width: 70%;  
 }
-
-.dish-card b {
-  font-size: 16px;
-}
