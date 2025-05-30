@@ -1,73 +1,85 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'Playfair Display', serif;
-  background-color: #ffffff;
-  padding: 40px;
+  background-color: #fff;
   color: #1a1a1a;
+  margin: 0;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto 80px auto;
+  width: 1024px;
+  border: 2px dashed #ccc; /* Для наглядности */
+  padding: 32px;
+  box-sizing: border-box;
 }
 
-.left {
+.main-content {
   display: flex;
-  justify-content: center;
-  align-items: stretch;
+  gap: 40px;
+  margin-bottom: 60px;
 }
 
-.soup-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  max-width: 600px;
+.image-section img {
+  width: 480px;
+  height: auto;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
 }
 
-.right h1 {
+.info-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
   font-size: 32px;
-  font-weight: 700;
   margin-bottom: 20px;
 }
 
 .description {
   font-size: 16px;
+  color: #333;
   line-height: 1.6;
   margin-bottom: 30px;
-  color: #333;
+  max-width: 480px;
 }
 
 .nutrition {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 30px;
 }
 
+.nutrition div {
+  background: #f2f2f2;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.nutrition div:last-child {
+  margin-right: 0;
+}
+
 .nutrition span {
-  display: block;
   font-size: 14px;
   color: #777;
+  display: block;
   margin-bottom: 4px;
 }
 
 .nutrition strong {
   font-size: 20px;
   font-weight: bold;
-  color: #000;
 }
 
-.price-block {
+.price-order {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -78,65 +90,62 @@ body {
   font-weight: bold;
 }
 
-.order-button {
-  padding: 10px 24px;
+button {
   background-color: #1a3fa6;
   color: white;
   border: none;
+  padding: 10px 24px;
   border-radius: 6px;
   font-size: 16px;
-  font-family: inherit;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.order-button:hover {
-  background-color: #15368d;
+button:hover {
+  background-color: #0e2c7a;
 }
 
-.recommended-dishes {
-  max-width: 1200px;
-  margin: 0 auto;
+.recommend-section {
+  margin-top: 40px;
 }
 
-.recommended-dishes h2 {
-  font-size: 22px;
-  font-weight: 700;
+.recommend-section h2 {
+  font-size: 20px;
   margin-bottom: 20px;
 }
 
-.dish-cards {
+/* Grid-контейнер для карточек */
+.dish-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
   gap: 20px;
 }
 
 .dish-card {
-  background-color: #f9f9f9;
+  background: #f9f9f9;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
 }
 
 .dish-card img {
   width: 100%;
-  height: 200px;
+  height: 140px;
   object-fit: cover;
 }
 
-.dish-info {
+.dish-card div {
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.dish-info h3 {
-  font-size: 16px;
-  font-weight: 600;
+.dish-card span {
+  font-size: 14px;
 }
 
-.dish-info .price {
-  font-size: 18px;
-  font-weight: bold;
+.dish-card b {
+  font-size: 16px;
 }
