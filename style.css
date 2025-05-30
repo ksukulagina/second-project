@@ -1,17 +1,17 @@
-/* Основные стили для всей страницы */
+/* стили для всей страницы */
 body {
   font-family: 'Inter', serif;
   background-color: #fff;
   color: #1a1a1a;
   margin: 0;
   padding: 40px 0;
-  display: flex; /* Делаем всё содержимое flex-контейнером */
-  justify-content: center; /* Центрируем содержимое по горизонтали */
+  display: flex; /* всё по центру */
+  justify-content: center; 
 }
-/* Контейнер с рамкой, в котором всё лежит */
+/* основной контейнер */
 .container {
-  width: 1024px; /* Ширина контейнера фиксированная */
-  margin: 0 auto;
+  width: 1024px; 
+  margin: auto;
   border: 2px dashed #ccc;
   padding: 32px; /* Отступы внутри контейнера */
   box-sizing: border-box; /* Внутренние отступы входят в ширину */
@@ -19,15 +19,14 @@ body {
 
 /* главное блюдо */
 .main-content {
-  display: flex; /* Располагаем элементы в ряд */
+  display: flex; /* элементы в ряд */
   gap: 40px; /* оступ между картинкой и текстом */
   margin-bottom: 60px;
-  align-items: stretch; /* Элементы растягиваются по высоте */
 }
 
 /* картинка главного блюда */
 .image-section {
-  flex: 0 0 480px;  /* Фиксированная ширина 480px, не растёт и не сжимается */
+  flex: 480px; 
 }
 
 .image-section img {
@@ -40,16 +39,16 @@ body {
 
 /* инфа о главном блюде */
 .info-section {
-  flex: 1; /* Занимает всё оставшееся место */
+  flex: 1; 
   display: flex;
-  flex-direction: column; /* Элементы идут сверху вниз */
+  flex-direction: column; /* сверху вниз */
 }
 
 .info-wrapper {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Распределяем пространство между заголовком и ценой */
+  justify-content: space-between; /* пространство между заголовком и ценой */
 }
 
 h1 {
@@ -66,7 +65,7 @@ h1 {
 }
 
 .nutrition {
-  display: flex; /* Располагаем элементы в ряд */
+  display: flex; /* в ряд */
   justify-content: space-between; /* Равномерно по ширине */
   margin-bottom: 30px;
 }
@@ -76,24 +75,20 @@ h1 {
   padding: 16px;
   border-radius: 8px;
   text-align: center; /* Текст по центру */
-  flex: 1; /* Все элементы одинаковой ширины */
+  flex: 1; /* одинаковой ширины */
   margin-right: 10px;
 }
 
-.nutrition div:last-child {
-  margin-right: 0; /* У последнего элемента отступ не нужен */
-}
 
 .nutrition span {
   font-size: 14px;
   color: #777;
-  display: block; /* Перенос на новую строку */
+  display: block; /* перенос на новую строку */
   margin-bottom: 4px;
 }
 
 .nutrition strong {
-  font-size: 20px; /* Побольше размер для чисел */
-  font-weight: bold;
+  font-size: 20px; /* больше для чисел */
 }
 
 .price-order {
@@ -132,17 +127,18 @@ button:hover {
 
 /* Сетка из карточек блюд */
 .dish-grid {
-  display: grid; /* Сетка */
-  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); /* Колонки адаптируются по ширине экрана */
-  gap: 20px; /* Расстояние между карточками */
+  display: flex; /* Сетка */
+  flex-wrap: wrap; /* чтобы переносились на новую строку */
+  gap: 24px; /* между карточками */
 }
 
 .dish-card {
   background: #e7e7e7;
   border-radius: 8px;
-  overflow: hidden; /* Обрезаем лишнее, чтобы ничего не вылезало */
+  overflow: hidden; 
   display: flex;
   flex-direction: column; /* Сначала картинка, потом текст */
+  width: 220px; /* фиксированная ширина */  
 }
 
 .dish-card img {
@@ -155,11 +151,14 @@ button:hover {
   padding: 10px;
   display: flex;
   justify-content: space-between; /* Название слева, цена справа */
-  align-items: center;
+  align-items: flex-start;
 }
 
 .dish-card span {
   font-size: 14px;
+  white-space: normal;     /* разрешаем перенос строк */
+  overflow-wrap: break-word; /* переносим слово, если оно слишком длинное */
+  max-width: 70%;  
 }
 
 .dish-card b {
