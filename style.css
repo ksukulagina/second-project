@@ -29,7 +29,6 @@ body {
 
 .image-section {
   display: grid;
-  border: 2px solid red;
 }
 
 .image-section img {
@@ -44,7 +43,6 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   align-content: space-between;
-  border: 2px solid red;
 }
 
 h1 {
